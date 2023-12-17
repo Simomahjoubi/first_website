@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP1: Développement Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        audio, video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #444;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio et Vidéo</h1>
+    <p>Introduction au langage HTML5 sous forme audio</p>
+    <audio controls>
+        <source src="what-is-html5.mp3" type="audio/mpeg">  
+    </audio>
+    <p>Introduction au langage HTML5 sous forme vidéo</p>
+    <video controls poster="html5-video.jpg">
+        <source src="what-is-html5.mp4" type="video/mp4">
+    </video>
+    <p>Exemple d'image cliquable</p>
+    <img src="Carte.png" usemap="#image-map">
+    <map name="image-map">
+        <area shape="poly" target="_blank" alt="" title="fst_eljadida" href="https://shorturl.at/efkxH" coords="195,146,117,161,147,338,202,330,209,343,231,340">
+    </map>
+    <p>Retour à <a href="Acceuil.html">l'accueil</a></p>
+    <footer>
+        <p>&copy; 2023 Développement Web. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
