@@ -1,174 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Design by foolishdeveloper.com -->
-    <title> login page </title>
- 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <style media="screen">
-      *,
-*:before,
-*:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #080710;
-}
-.background{
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-}
-.background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-.shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
-form{
-    height: 520px;
-    width: 400px;
-    background-color: rgba(255,255,255,0.13);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-}
-form *{
-    font-family: 'Poppins',sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
-form h3{
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-}
-
-label{
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
-}
-input{
-    display: block;
-    height: 50px;
-    width: 100%;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
-}
-::placeholder{
-    color: #e5e5e5;
-}
-button{
-    margin-top: 50px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.social{
-  margin-top: 30px;
-  display: flex;
-}
-.social div{
-  background: red;
-  width: 150px;
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px;
-  background-color: rgba(255,255,255,0.27);
-  color: #eaf0fb;
-  text-align: center;
-}
-.social div:hover{
-  background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-  margin-left: 25px;
-}
-.social i{
-  margin-right: 4px;
-}
-
-    </style>
-    
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAYAN Air</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <form>
-        <h3>Login Here</h3>
-
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
-
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
-
-        <button type="button" onclick="checkCredentials()">Log In</button>
-        <div class="social">
-          <a href="https://www.google.com/?lang=fr" target="_blank" ><div class="go"><i class="fab fa-google"></i> twitter </div> </a>
-          <a href="https://www.facebook.com" target="_blank" ><div class="fb"><i class="fab fa-facebook"></i> Facebook</div></a>
+    
+    <header>
+        <div class="logo">
+            <a href="index.html"> <span>Rayan</span>Air</a>
         </div>
-    </form>
-    <script>
-        function checkCredentials() {
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
+        <ul class="menu">
+            <li><a href="#">Acceuil</a></li>
+            <li><a href="#a-propos">à propos</a></li>
+            <li><a href="#popular-destination">destinations</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <a href="resirvation.html" class="btn-reservation">Réserver Maintenant</a>
 
-            // Vérification des identifiants
-            if (username === 'simo' && password === '123456') {
-                // Redirection vers index.html
-                window.location.href = 'Acceuil.html';
-            } else {
-                alert('Identifiants incorrects. Veuillez réessayer.');
-            }
+        <div class="responsive-menu"></div>
+    </header>
+    <!-- acceuil section -->
+    <section id="home">
+        <h2> Nous suivre</h2>
+        <h4>Voyagez en Sécurité</h4>
+        <p>We are travel associates. We are invited to visit this beautiful view in Morocco.</p>
+        <p>Marroco king of light come live in marroco  .</p>
+        <a href="resirvation.html" class="btn-reservation home-btn">Réserver Maintenant</a>
+        <div class="find_trip">
+            <form action="#popular-destination">
+                <div>
+                    <label>Pays</label>
+                    <input type="text" placeholder="Entrez un Pays">
+                </div>
+                <div>
+                    <label>Ville</label>
+                    <input type="text" placeholder="Entrez une ville">
+                </div>
+                <div>
+                    <label>Région</label>
+                    <input type="text" placeholder="Entrez une région">
+                </div>
+                <<input type="submit" value="voir">
+            </form>
+        </div>
+    </section>
+
+    <!-- A propos section -->
+    <section id="a-propos">
+        <h1 class="title">à propos</h1>
+        <div class="img-desc">
+           <div class="left">
+                <video src="img/morroco.mp4" autoplay loop ></video>
+           </div>
+            <div class="right">
+                <h3>Nous voyageons pour chercher d'autres états, d'autres vies, d'autres âmes.</h3>
+                <p> Au Maroc, l’aventure sous toutes ses formes où vous voulez quand vous voulez ! Découvrez la diversité de ses paysages : ses sommets de l’Atlas, ses déserts de pierres ou de sable fin, ses forêts de cèdres centenaires dans le Moyen Atlas. Oserez-vous gravir les 4 167 m du Toubkal, le plus haut sommet d’Afrique du Nord ? Pour les amoureux de culture, de nombreux sites historiques sont à visiter comme par exemple la célèbre place Jemaa El Fna, la mythique Kasbah de Tanger ou les imposants remparts .</p>
+                <a href="#s-img">Lire Plus</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- section destination -->
+    <section id="popular-destination">
+        <h1 class="title">destinations populaires</h1>
+        <div class="content">
+            <!-- box -->
+            <div class="box">
+                <img src="img/agadir.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Agadir</h4>
+                        <p>AGADIR-TAGHAZOUT, UNE DESTINATION ACTIVE</p>
+                        <p>Agadir est une des perles du Maroc</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+            <!-- box -->
+            <div class="box">
+                <img src="imG/alhoceima.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>El Hoceima</h4>
+                        <p>EL HOCEIMA, LA PERLE MÉDITERRANÉENNE</p>
+                        <p>Les lieux ont des allures de paradis terrestre</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+            <!-- box -->
+            <div class="box">
+                <img src="img/chawn.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>chefchaouen</h4>
+                        <p>CHEFCHAOUEN, UN RÊVE BLEU</p>
+                        <p>Chefchaouen est une ville avec un cachet bien particulier</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+             <!-- box -->
+             <div class="box">
+                <img src="img/dakhla.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Dakhla</h4>
+                        <p>DAKHLA, LA PERLE DU SUD MAROCAIN</p>
+                        <p>Dakhla est un petit bout de paradis au sud du Maroc, perdu entre les eaux de l'Atlantique et les sables du Sahara</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+             <!-- box -->
+             <div class="box">
+                <img src="img/eljadida.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>El jadida</h4>
+                        <p>EL JADIDA-MAZAGAN, LA MULTICULTURELLE.</p>
+                        <p>cette cité érigée par les portugais se tient avec fierté face à l’océan depuis le 16ème siècle.</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+             <!-- box -->
+             <div class="box">
+                <img src="img/essaouira.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Essaouira</h4>
+                        <p>ESSAOUIRA-MOGADOR, LA MARIÉE DE L'ATLANTIQUE</p>
+                        <p>Des murs crénelés, le souffle des vents alizéens, des maisons aux façades blanches et bleues, de la couleur de l'écume et de l'onde,</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+            <!-- box -->
+            <div class="box">
+                <img src="img/marzouga.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>marzouga</h4>
+                        <p>Merzouga est une des portes du Sahara</p>
+                        <p>un petit village perdue au milieu des sables. C'est le territoire de l'erg Chebbi, un monde de dunes, de palmeraies</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+            <!-- box -->
+            <div class="box">
+                <img src="img/tanger.jpg" alt="">
+                <div class="content">
+                    <div>
+                        <h4>Tanger</h4>
+                        <p>TANGER, UNE VILLE COSMOPOLITE !</p>
+                        <p>Promenez-vous dans Tanger la Blanche. Flânez dans des rues que bordent des maisons enduites de chaux et, comme Matisse avant-vous</p>
+                        <a href="#">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- box -->
+        </div>
+    </section>
+
+        <!-- suport section -->
+        <section id="a-propos">
+            <h1 class="title">suport</h1>
+            <div class="suport">
+                <div class="nom">
+                    <img src="img/simo.png" alt=""id="s-img">
+                    <h2>MOHAMED MAHJOUBI</h2>
+                    <p>mahamed234@gmail.com</p>
+                    <a href="mailto:mohamdemah@gmail.com">contact</a>
+                </div>
+                <div class="nom">
+                    <img src="img/taha.png" alt="" id="s-img">
+                    <h2>taha alimoussa</h2>
+                    <p>tahamoussa345@gmail.com</p>
+                    <a href="mailto:tahamoussa@gmail.com">contact</a>
+                </div>
+                <div class="nom">
+                    <img src="img/yassin.png" alt="" id="s-img">
+                    <h2>yassin hafidi</h2>
+                    <p>hafidi922@gmail.com</p>
+                    <a href="mailto:hafidi922@gmail.com">contact</a>
+                </div>
+            </div>
+            
+        </section>
+
+    <!--  contact section -->
+    <section id="contact">
+        <h1 class="title">Contact</h1>
+        <form action="">
+            <div class="left-right">
+                <div class="left">
+                    <label>Nom Complet</label>
+                    <input type="text">
+                    <label>Objet</label>
+                    <input type="text">
+                    <label>Email</label>
+                    <input type="text">
+                    <label>Message</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="right">
+                    <label>Numéro</label>
+                    <input type="text">
+                    <label>Date</label>
+                    <input type="text">
+                    <label>Autres Details</label>
+                    <input type="text">
+                    <label>Adresse</label>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13350.119348691253!2d-8.49523355!3d33.22642015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda91e1d173ae243%3A0x4fa699b9874f3eab!2sFacult%C3%A9%20des%20Sciences%20el%20Jadida!5e0!3m2!1sfr!2sma!4v1704564104057!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <button>Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p> Réalisé par <span> Mohamed Mahjoubi . Taha Alimousa . Yassin Hafidi</span></p>
+    </footer>
+
+
+    <script>
+        var toggle_menu = document.querySelector('.responsive-menu');
+        var menu = document.querySelector('.menu');
+        toggle_menu.onclick= function(){
+             toggle_menu.classList.toggle('active');
+             menu.classList.toggle('responsive')
         }
     </script>
+
+
 </body>
 </html>

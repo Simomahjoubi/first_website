@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirTravel</title>
+    <link rel="stylesheet" href="resirvation.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="index.html"> <span>Rayan</span>Air</a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="index.html#a-propos">à propos</a></li>
+            <li><a href="index.html#popular-destination">destinations</a></li>
+            <li><a href="index.html#contact">contact</a></li>
+        </ul>
+        <a href="resirvation.html" class="btn-reservation">Réserver Maintenant</a>
+
+        <div class="responsive-menu"></div>
+    </header>   
+ <!--  reservation section -->
+    
+ <section id="contact">
+    <h1 class="title">Formulaire de Réservation</h1>
+    <form action="#">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom">
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom">
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+            <div class="form-group">
+                <label for="ville_depart">Ville de départ :</label>
+                <input type="text" id="ville_depart" name="ville_depart">
+            </div>
+            <div class="form-group">
+                <label for="ville_destination">Ville de destination :</label>
+                <input type="text" id="ville_destination" name="ville_destination">
+            </div>
+            <div class="form-group">
+                <label for="date_depart">Date de départ :</label>
+                <input type="date" id="date_depart" name="date_depart">
+            </div>
+            <div class="form-group">
+                <button type="submit">Envoyer</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+    <footer>
+        <p> Réalisé par <span> Mohamed Mahjoubi . Taha Alimousa . Yassin Hafidi</span></p>
+    </footer>
+
+
+    <script>
+        var toggle_menu = document.querySelector('.responsive-menu');
+        var menu = document.querySelector('.menu');
+        toggle_menu.onclick= function(){
+             toggle_menu.classList.toggle('active');
+             menu.classList.toggle('responsive')
+        }
+    </script>
+
+
+</body>
+</html>
